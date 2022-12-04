@@ -1,5 +1,4 @@
 with open("input.txt") as f:
-    lines = f.read().splitlines()
     pairs = map(lambda l : list(map(lambda p : list(map(int, p.split('-'))), l.split(','))), f.read().splitlines())
     sets = list(map(lambda p : list(map(lambda x : set(range(x[0], x[1] + 1)), p)), pairs))
 
