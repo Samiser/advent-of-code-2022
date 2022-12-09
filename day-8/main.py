@@ -1,5 +1,3 @@
-from pprint import pp
-
 grid = [[int(tree) for tree in row] for row in open("input.txt").read().splitlines()]
 visible = [[0 for x in range(len(grid))] for y in range(len(grid[0]))] 
 scores = [[1 for x in range(len(grid))] for y in range(len(grid[0]))] 
