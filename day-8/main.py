@@ -17,7 +17,7 @@ for _ in range(4):
                 highest = tree
                 visible[x][y] = 1
     rotate = lambda g : list(map(list, zip(*reversed(g))))
-    grid, visible, scores = tuple(map(rotate, (grid, visible, scores)))
+    grid, visible, scores = map(rotate, (grid, visible, scores))
 
 print(sum(row.count(1) for row in visible))
 print(max(map(max, scores)))
